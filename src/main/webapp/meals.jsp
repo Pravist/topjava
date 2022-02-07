@@ -15,6 +15,15 @@
 <h3><a href="index.html">Home</a></h3>
 <hr>
 <h2>Meals</h2>
+</body>
+<body>
+<table border = "1">
+<tr>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Calories</th>
+</tr>
+</table>
 
 </body>
 </html>

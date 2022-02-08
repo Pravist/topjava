@@ -16,6 +16,8 @@
 <hr>
 <h2>Meals</h2>
 </body>
+
+<body>
 <style>
     .normal {
         color: green
@@ -25,7 +27,6 @@
         color: red
     }
 </style>
-<body>
 <table border="1">
     <tr>
         <th>Date</th>
@@ -34,7 +35,7 @@
     </tr>
     <c:forEach items="${mealsTo}" var="meal">
         <jsp:useBean id="meal" type="ru.javawebinar.topjava.model.MealTo"></jsp:useBean>
-        <tr Class=${meal.excess ? 'exceeded' : normal}>
+        <tr Class=${meal.excess ? 'exceeded' : 'normal'}>
             <td><c:out value="${meal.description}"/></td>
             <td>
                 <%=TimeUtil.toString(meal.getDateTime()) %>

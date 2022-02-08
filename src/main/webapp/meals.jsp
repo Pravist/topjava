@@ -1,4 +1,4 @@
-<%--
+<%@ page import="ru.javawebinar.topjava.util.TimeUtil" %><%--
   Created by IntelliJ IDEA.
   User: Pravist
   Date: 06.02.2022
@@ -16,13 +16,32 @@
 <hr>
 <h2>Meals</h2>
 </body>
+<style>
+    .normal {
+        color: green
+    }
+
+    .exceeded {
+        color: red
+    }
+</style>
 <body>
-<table border = "1">
-<tr>
-    <th>Date</th>
-    <th>Description</th>
-    <th>Calories</th>
-</tr>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Calories</th>
+    </tr>
+    <c:forEach items="${mealsTo}" var="meal">
+        <jsp:useBean id="meal" type="ru.javawebinar.topjava.model.MealTo"></jsp:useBean>
+        <tr Class=${meal.excess ? 'exceeded' : normal}>
+            <td><c:out value="${meal.descripion}"/></td>
+            <td>
+                <% =TimeUtil.toString(meal.getDateTime()) %>
+            </td>
+            <td><c:out value="${meal.calories}" /></td>
+        </tr>
+    </c:forEach>
 </table>
 
 </body>

@@ -37,7 +37,7 @@
         <tr Class=${meal.excess ? 'exceeded' : normal}>
             <td><c:out value="${meal.descripion}"/></td>
             <td>
-                <% =TimeUtil.toString(meal.getDateTime()) %>
+                <%=TimeUtil.toString(meal.getDateTime()) %>
             </td>
             <td><c:out value="${meal.calories}" /></td>
         </tr>

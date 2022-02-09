@@ -14,10 +14,10 @@
 </head>
 
 <body>
-<c:if test="${not empty meal}" >
+<c:if test="${not empty meal}">
     Edit Meal
 </c:if>
-<c:if test="${empty meal}" >
+<c:if test="${empty meal}">
     Add Meal
 </c:if>
 <form method="post" action="meals">
@@ -30,14 +30,17 @@
         </c:if>
 
         <tr>
+            <h3>DateTime</h3>
+
+            <input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>">
+            </th>
+        </tr>
+
+        <tr>
             <h3>Description</h3>
             <input type="text" name="description" required value="<c:out value="${meal.description}"/>">
         </tr>
 
-        <tr>
-            <h3>Date</h3>
-            <input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>">
-        </tr>
 
         <tr>
             <h3>Calories</h3>
@@ -45,7 +48,9 @@
         </tr>
 
     </table>
-    <input type="submit" value="Submit"/>
+    <br>
+
+    <input type="submit" value="Save"/>
 </form>
 
 </body>

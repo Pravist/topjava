@@ -50,7 +50,7 @@
                 <%=TimeUtil.toString(meal.getDateTime()) %>
             </td>
             <td><c:out value="${meal.calories}" /></td>
-            <td><a href="meals?action=edit&mealID=<c:out value="${meal.id}"/>">Edit</a></td>
+            <td><a href="meals?action=edit&mealID=<c:out value="${meal.id}"/>">Update</a></td>
             <td><a href="meals?action=delete&mealID=<c:out value="${meal.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>

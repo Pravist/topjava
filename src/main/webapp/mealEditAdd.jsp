@@ -51,6 +51,13 @@
     <br>
 
     <input type="submit" value="Save"/>
+    <input type="reset" value="Clear"/>
+ <button onclick="document.location='meals'">Отмена</button>
+</form>
+</body>
+</html>
+
+
 </form>
 
 </body>

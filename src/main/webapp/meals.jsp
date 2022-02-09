@@ -29,6 +29,8 @@
 </style>
 <a href="meals?action=add">Add Meal</a>
 <br>
+<br>
+
 <table border="1">
     <tr>
         <th>ID</th>

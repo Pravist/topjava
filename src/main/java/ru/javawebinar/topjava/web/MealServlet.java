@@ -68,6 +68,7 @@ public class MealServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.debug("MealServlet doPost");
+        request.setCharacterEncoding("UTF-8");
         String description = request.getParameter("description");
         String dateTime = request.getParameter("dateTime");
         LocalDateTime localDateTime = LocalDateTime.parse(dateTime, DateTimeFormatter.ISO_DATE_TIME);
@@ -92,3 +93,4 @@ public class MealServlet extends HttpServlet {
         return mealsTo;
 
     }
+}

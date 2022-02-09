@@ -30,21 +30,21 @@
         </c:if>
 
         <tr>
-            <th>DateTime</th>
+            <td>DateTime</td>
 
-            <th><input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>"></th>
+            <td><input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>"></td>
 
         </tr>
 
         <tr>
-            <th>Description</th>
-            <th><input type="text" name="description" required value="<c:out value="${meal.description}"/>"></th>
+            <td>Description</td>
+            <td><input type="text" name="description" required value="<c:out value="${meal.description}"/>"></td>
         </tr>
 
 
         <tr>
-            <th>Calories</th>
-            <th><input type="number" name="calories" required value="<c:out value="${meal.calories}" />"></th>
+            <td>Calories</td>
+            <td><input type="number" name="calories" required value="<c:out value="${meal.calories}" />"></td>
         </tr>
 
     </table>

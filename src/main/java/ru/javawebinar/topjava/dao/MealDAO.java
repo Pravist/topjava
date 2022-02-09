@@ -10,9 +10,9 @@ public interface MealDAO {
 
     void remove(int id);
 
-    void update(LocalDateTime localDateTime, String description, int calories);
+    void update(int id, LocalDateTime localDateTime, String description, int calories);
 
-    Meal get();
+    Meal get(int id);
 
     List<Meal> getAll();
 }

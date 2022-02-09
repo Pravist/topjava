@@ -15,36 +15,36 @@
 
 <body>
 <c:if test="${not empty meal}">
-    Edit Meal
+    <h3> Edit Meal</h3>
 </c:if>
 <c:if test="${empty meal}">
-    Add Meal
+    <h3> Add Meal </h3>
 </c:if>
 <form method="post" action="meals">
     <table>
         <c:if test="${not empty meal}">
             <tr>
-                <h3>ID</h3>
-                <input readonly type="text" name="id" value="<c:out value="${meal.id}"/> ">
+
+                <input readonly type="hidden" name="id" value="<c:out value="${meal.id}"/> ">
             </tr>
         </c:if>
 
         <tr>
-            <h3>DateTime</h3>
+            <th>DateTime</th>
 
-            <input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>">
-            </th>
+            <th><input type="datetime-local" name="dateTime" required value="<c:out value="${meal.dateTime}"/>"></th>
+
         </tr>
 
         <tr>
-            <h3>Description</h3>
-            <input type="text" name="description" required value="<c:out value="${meal.description}"/>">
+            <th>Description</th>
+            <th><input type="text" name="description" required value="<c:out value="${meal.description}"/>"></th>
         </tr>
 
 
         <tr>
-            <h3>Calories</h3>
-            <input type="number" name="calories" required value="<c:out value="${meal.calories}" />">
+            <th>Calories</th>
+            <th><input type="number" name="calories" required value="<c:out value="${meal.calories}" />"></th>
         </tr>
 
     </table>
@@ -52,7 +52,7 @@
 
     <input type="submit" value="Save"/>
     <input type="reset" value="Clear"/>
- <button onclick="document.location='meals'">Отмена</button>
+    <button onclick="document.location='meals'">Отмена</button>
 </form>
 </body>
 </html>

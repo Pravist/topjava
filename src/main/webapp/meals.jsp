@@ -27,6 +27,7 @@
         color: red
     }
 </style>
+<a href="meals?action=add">Add Meal</a>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -53,6 +54,6 @@
         </tr>
     </c:forEach>
 </table>
-<a href="meals?action=add">Add Meal</a>
+
 </body>
 </html>

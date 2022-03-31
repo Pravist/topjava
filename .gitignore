@@ -6,3 +6,4 @@ log
 *.patch
 
 
+/config/REST-Project-1-soapui-project.xml
